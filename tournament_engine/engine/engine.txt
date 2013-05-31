@@ -1,0 +1,34 @@
+
+Python Tournament Engine
+
+Postby nneonneo » Tue Feb 02, 2010 11:17 pm
+After a few days of feverish coding, the Python tournament engine is ready for general use.
+
+This engine comprises two main programs: round and tournament.
+
+Round runs a single match against two players (either human or bot), allowing you to play matches directly against your bot to test its mettle.
+
+Tournament runs a full tournament between any number of bot players, allowing you to quickly test multiple strategies and variations against each other.
+
+Both can be run as-is, and they will prompt you for the initial setup. They each have several command-line options for power users, and you can get more information with the "--help" switch.
+
+Windows users are recommended to get the "windows.zip" package, which includes precompiled versions of both programs, so you don't need Python installed. The Windows package also includes two precompiled starter bots (starter_cs from the C# package and starter_cpp from the C++ package) so that you can try out the tournament and round features without needing to have a bot of your own.
+
+Everyone else should get the "source.zip" or "source.tar.gz" package, which includes executable Python source code for both programs.
+
+If you have any questions, problems, comments or concerns, please voice them in this thread!
+
+Changelog:
+Feb 7 2010
+
+    * Added Java tournament maps
+    * Added visualizer output for nsasherr's visualizer (pdf/png output like the forum header image) and pgpaskar's visualizer (JavaScript visualizer still in development)
+    * Fixed encoding-related bug in Windows package; thanks to m3lawren for finding this
+
+
+Feb 4 2010
+
+    * Files can now be used to specify intricate board layouts. The format is two integers on a line (width and height) separated by a space, followed by several lines containing "#" for walls and " " for spaces; see sampleboard.txt for an example and sampleboardlist.txt for use in a tournament.
+    * Timing adjustments for the tournament engine: the final result of each match is now shown for a longer time in detail level 3 (-vvv) mode.
+    * Included MSVCR71.dll in the Windows packages to fix missing DLL errors on certain Windows computers
+    * Fixed -u flag to tournament engine to make specific bots play in every round (this is similar to gauntlet.py, posted below).

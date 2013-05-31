@@ -1,0 +1,126 @@
+goal: (1, 1)
+Shortest path took: 0.00755682635642
+[(12, 13), (12, 12), (11, 12), (11, 11), (10, 11), (10, 10), (9, 10), (9, 9), (9, 8), (8, 8), (7, 8), (7, 7), (7, 6), (6, 6), (5, 6), (5, 5), (4, 5), (4, 4), (4, 3), (3, 3), (2, 3), (2, 2), (2, 1), (1, 1)]
+Minimax level: 5
+minimaxspacecount: {1: 0, 4: 0}
+Choice: 1
+Turn took: 0.986912023735
+goal: (1, 2)
+Shortest path took: 0.00679164530688
+[(11, 13), (11, 12), (10, 12), (10, 11), (9, 11), (9, 10), (9, 9), (8, 9), (8, 8), (7, 8), (6, 8), (6, 7), (5, 7), (5, 6), (4, 6), (4, 5), (3, 5), (3, 4), (2, 4), (2, 3), (2, 2), (1, 2)]
+Minimax level: 10
+minimaxspacecount: {1: 0, 4: 0}
+Choice: 1
+Turn took: 0.907865385126
+goal: (1, 3)
+Shortest path took: 0.00557109912014
+[(10, 13), (10, 12), (9, 12), (9, 11), (8, 11), (8, 10), (8, 9), (7, 9), (6, 9), (6, 8), (5, 8), (5, 7), (4, 7), (4, 6), (3, 6), (3, 5), (3, 4), (2, 4), (1, 4), (1, 3)]
+Minimax level: 10
+minimaxspacecount: {1: -6, 4: 0}
+Choice: 1
+Turn took: 0.901154196972
+goal: (1, 4)
+Shortest path took: 0.00461762598319
+[(9, 13), (9, 12), (8, 12), (8, 11), (7, 11), (7, 10), (7, 9), (6, 9), (5, 9), (5, 8), (4, 8), (4, 7), (3, 7), (3, 6), (3, 5), (2, 5), (2, 4), (1, 4)]
+Minimax level: 13
+minimaxspacecount: {1: -14, 4: 0}
+Choice: 4
+Turn took: 0.914507011366
+goal: (1, 5)
+Shortest path took: 0.00397117510745
+[(9, 12), (8, 12), (7, 12), (7, 11), (7, 10), (6, 10), (5, 10), (5, 9), (5, 8), (4, 8), (4, 7), (3, 7), (2, 7), (2, 6), (1, 6), (1, 5)]
+Minimax level: 11
+minimaxspacecount: {1: 0, 3: -12, 4: 14}
+Choice: 4
+Turn took: 0.991593065599
+goal: (2, 5)
+Shortest path took: 0.00304060990992
+[(9, 11), (8, 11), (7, 11), (7, 10), (7, 9), (6, 9), (5, 9), (5, 8), (5, 7), (4, 7), (4, 6), (3, 6), (3, 5), (2, 5)]
+Minimax level: 11
+minimaxspacecount: {1: 0, 3: -18, 4: 8}
+Choice: 4
+Turn took: 0.958896451923
+goal: (3, 5)
+Shortest path took: 0.00206031772194
+[(9, 10), (8, 10), (7, 10), (7, 9), (7, 8), (6, 8), (5, 8), (5, 7), (5, 6), (4, 6), (4, 5), (3, 5)]
+Minimax level: 11
+minimaxspacecount: {1: 0, 3: -26, 4: 0}
+Choice: 1
+Turn took: 0.902663886053
+goal: (4, 5)
+Shortest path took: 0.00160858433125
+[(8, 10), (8, 9), (7, 9), (7, 8), (6, 8), (6, 7), (5, 7), (5, 6), (5, 5), (4, 5)]
+Minimax level: 12
+minimaxspacecount: {1: -10, 2: -36, 4: 0}
+Choice: 4
+Turn took: 0.927093806615
+goal: (4, 6)
+Shortest path took: 0.00115182236849
+[(8, 9), (7, 9), (7, 8), (6, 8), (5, 8), (5, 7), (4, 7), (4, 6)]
+Minimax level: 8
+minimaxspacecount: {1: 0, 3: -26, 4: 0}
+Choice: 1
+Turn took: 0.950186965103
+goal: (5, 6)
+Shortest path took: 0.000618234999141
+[(7, 9), (7, 8), (6, 8), (6, 7), (5, 7), (5, 6)]
+Minimax level: 12
+minimaxspacecount: {1: -12, 2: -51, 4: 0}
+Choice: 4
+Turn took: 0.917576954613
+goal: (5, 7)
+Shortest path took: 0.000337752423842
+[(7, 8), (6, 8), (6, 7), (5, 7)]
+Minimax level: 14
+minimaxspacecount: {1: -11, 3: -34, 4: -7}
+Choice: 4
+Turn took: 0.775323120676
+goal: (6, 7)
+Shortest path took: 0.000139123827189
+[(7, 7), (6, 7)]
+Minimax level: 11
+minimaxspacecount: {1: 0, 3: -33, 4: 2}
+Choice: 4
+Turn took: 0.918359735665
+goal: (7, 7)
+Shortest path took: 0.000135492080695
+[(7, 6), (7, 7)]
+Minimax level: 12
+minimaxspacecount: {1: 0, 3: 24, 4: 31}
+Choice: 4
+Turn took: 0.368394027733
+goal: (7, 6)
+Shortest path took: 0.000144152399258
+[(7, 5), (7, 6)]
+Minimax level: 4
+minimaxspacecount: {1: 0, 3: 25, 4: 53}
+Choice: 4
+Turn took: 0.165380516239
+goal: (7, 5)
+Shortest path took: 0.000136609541151
+[(7, 4), (7, 5)]
+Minimax level: 5
+minimaxspacecount: {1: 0, 3: 26, 4: 47}
+Choice: 4
+Turn took: 0.212038680894
+goal: (7, 4)
+Shortest path took: 0.000129346048176
+[(7, 3), (7, 4)]
+Minimax level: 6
+minimaxspacecount: {1: 0, 3: 27, 4: 41}
+Choice: 4
+Turn took: 0.241189313167
+goal: (7, 3)
+Shortest path took: 0.00013381589001
+[(7, 2), (7, 3)]
+Minimax level: 6
+minimaxspacecount: {1: 0, 3: 28, 4: 35}
+Choice: 4
+Turn took: 0.348629225223
+goal: (7, 2)
+Shortest path took: 0.000116774618
+[(7, 1), (7, 2)]
+Minimax level: 7
+minimaxspacecount: {1: -169, 3: 29}
+Choice: 3
+Turn took: 0.0517638414938

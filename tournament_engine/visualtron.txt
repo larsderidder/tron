@@ -1,0 +1,92 @@
+So I've thrown together a simple visual interface that playes two agents/players against each other. Its a very simple command line program that just plays to agents and lets you watch the game/s unfold.
+
+Example:
+[~/tron/]$ python visualtron/VisualTron.py --numgames 5 --boardfile maps/trix.txt 'python wallbot.py' 'python wallbot.py'
+[~/tron/]$ python visualtron/VisualTron.py --numgames 5 --boardfile maps/trix.txt wallbot.py wallbot.py
+
+Plays 5 games between two wallbot agents on the trix map. The second example only works on Python bots as it loads them directly instead of using the interpreter and stdin/stdout. This requires the bot to define a which_move() function like the default example bots.
+
+It is written in python and based on pygame which runs on many platforms, so hopefully it works on your system. Please leave comments/suggestions etc.
+
+To install simply extract in your tron directory and you are good to go. Requires: pygame
+
+Download the current version:
+
+visualtron.tar.gz
+    Visual Tron Game Player 0.21 -- Source Code (.py files)
+    (188.6 KiB) Downloaded 33 times
+
+
+visualtron.zip -- Zip file of Windows executable made with py2exe.
+(2.96 MB : Hosted on MediaFire.com due to 2MB upload file limitation of the forum software.)
+
+Change Log
+Feb 12, 2010 (v0.21):
+
+    * Fixed an over anxious submission. Now correctly handles '--autonext' flag. 
+
+
+Feb 12, 2010 (v0.2):
+
+    * Major correctness update: the bots now move simultaneously as per the games spec. So both moves are retrieved before things are updated, this means bots both attempting to move into the same spot now correctly tie.
+    * Now keeps track of the wins, losses, and ties on the gui. Handy if you play multiple games.
+    * New keyboard shortcuts:
+          o q -- quits the program, even if games are left to play.
+          o <space bar> -- skips to the next game without finishing the current one (scores are not updated).
+          o [ -- slows down the game (waiting longer between moves).[/*]
+          o ] -- speeds up the game (waiting less time between moves).
+
+
+Feb 11, 2010 (v0.11):
+
+    * New GUI elements to tell you which player (red or blue) is which bot.
+    * New command line option '--speed' for controlling play speed.
+    * Now able to run python based bots natively without bothering with stdout/stdin if they define a module level 'which_move' function (the default function name form the starter pack) by just giving it the module's filename (eg wallbot.py) instead of the full command ('python wallbot.py'). The benefit of this is that games can be played much faster since there isn't the I/O bottle neck of stdout/stdin communication.
+
+
+Feb 10, 2010 (v0.1):
+
+    * The first version v0.1 uploaded.
+
+
+Help Text
+
+Code: Select all
+    $ python visualtron/VisualTron.py --help
+    usage: VisualTron [-h] [-B BOARDFILE] [-n NUMGAMES] [--autonext] [-s SPEED]
+                      Player 1 Command Player 2 Command
+
+    Runs a visual game of Tron using two agents.
+
+    Keyboard Controls:
+        q - quit the program
+        <space bar> - skip to the next game without finishing the current one, or start
+            the next game if the current one is done
+        [ - slow down the game
+        ] - speed up the game
+
+    Example: python visualtron/VisualTron.py -n 2 -B maps/trix.txt 'ruby wallbot.rb' 'python wallbot.py'
+             python visualtron/VisualTron.py -n 2 -B maps/trix.txt wallbot.py wallbot.py
+             
+    The second example only works on Python bots as it loads them directly instead of
+using the interpreter and stdin/stdout. This requires the bot to define a
+which_move() function like the default example bots.
+
+positional arguments:
+  Player 1 Command      The command to run first player agent, or a python bot
+                        file.
+  Player 2 Command      The command to run first player agent, or a python bot
+                        file.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -B BOARDFILE, --boardfile BOARDFILE
+                        The boardfile to load in [default: maps/trix.txt]
+  -n NUMGAMES, --numgames NUMGAMES
+                        Number of games to play [default: 1]
+  --autonext            Automatically starts the next game after the current
+                        one is finished.
+  -s SPEED, --speed SPEED
+                        Controls the speed of the games being played, should
+                        be between 1 and 999. Lowering it is not guaranteed to
+                        speed always things up. [default: 50]

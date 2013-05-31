@@ -1,0 +1,27 @@
+So this is a random map generator. It'll generate regular boards in the format expected by both the Java tourny engine and nneonneo's tourny engine (with -p option). You'll need to compile this yourself; here's how!
+
+Type `make all`
+and then `./mapgen <options>`
+
+Also, type `./mapgen -help` for a list of options. It will output the map to stdout. Feel free to pipe this to a file or enter it directly into your call to the tourny engine of your choice (remember to add -p for nneonneo's (unless you use the BoardFile technique as described in the second post))
+
+Examples:
+
+Code: Select all
+    # makes a random 40x30 map to map.txt
+    ./mapgen -x 40 -y 30 > map.txt
+
+    # makes a random 33x21 with only point symmetry
+    ./mapgen -x 33 -y 21 -l 1 > map.txt
+
+    # makes a random 70x70 maze map
+    ./mapgen -x 70 -y 70 -m > maze.txt
+
+    # run random map with nneonneo's engine
+    ./round.py <your bot here> <second bot here> -vvv -b "$(./mapgen -p)"
+
+
+    # run random maze map with nneonneo's engine
+    ./round.py <your bot here> <second bot here> -vvv -b "$(./mapgen -p -m)"
+
+
